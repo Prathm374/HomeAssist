@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.navHero {
+  background-image: linear-gradient(
+      rgba(58, 46, 123, 0.4),
+      rgba(58, 46, 123, 1)
+    ),
+    url("../back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+}
+
+.feat {
+  display: flex;
+  margin-inline: 3%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.featHead > h2 {
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  width: 95%;
+  margin-top: 2%;
+  color: aqua;
+  border-bottom: 2px solid aqua;
+}
+
+.featHead {
+  background-image: linear-gradient(
+    rgba(58, 46, 123, 1),
+    rgba(58, 46, 123, 0.8)
+  );
+  width: 100%;
+  padding-top: 1%;
+}
