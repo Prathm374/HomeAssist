@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import img2 from "../assets/2.png";
 import "./Hero.css";
+import Login from "./Login";
 
 // Not Responsive
 
 export default function Hero() {
   const [disp, setDisp] = useState(true);
   const [btnText, setBtnText] = useState("Get Started");
+  const [dispForm, setDispForm] = useState(false);
 
-  const handleLogin = () => {
+  const handleGetStarted = () => {
     setDisp(!disp);
     if(disp){
       setBtnText("< Back");
     }
     else{
       setBtnText("Get Started");
+      setDispForm(false);
     }
   };
+
+  const handleLogin = () => {
+    setDispForm(true);
+  }; 
 
   return (
     <div>
@@ -37,7 +44,7 @@ export default function Hero() {
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
               <button
-                onClick={handleLogin}
+                onClick={handleGetStarted}
                 type="button"
                 className="btn btn-primary btn-lg px-4 me-md-2"
               >
@@ -53,21 +60,18 @@ export default function Hero() {
           </div>
           <div className="col-10 col-sm-8 col-lg-6 heroLogin">
             {/* Demo Image */}
-            {disp && (
               <img
                 src={img2}
-                className="d-block mx-lg-auto img-fluid"
+                className={disp ? "d-block mx-lg-auto img-fluid" : "hide"}
                 id="heroImg"
                 alt="HomeAssist Logo"
                 loading="lazy"
               />
-            )}
-            {!disp && (
-              <div className="container d-flex col-6 justify-content-around">
-                <button className="btn btn-primary">Login</button>
+              <div className={disp || dispForm ? "hide" : "container d-flex col-6 justify-content-around"}>
+                <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                 <button className="btn btn-outline-info">Login</button>
               </div>
-            )}
+            <div className={dispForm ? "loginForm" : "hide"}><Login /></div>
           </div>
         </div>
       </div>

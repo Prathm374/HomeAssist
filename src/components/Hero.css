@@ -1,6 +1,6 @@
-.heroLogin:hover {
-  animation: fadeOut .8s ease 0s 1 normal forwards;
-}
+/* .heroLogin:hover {
+   animation: fadeOut .8s ease 0s 1 normal forwards;
+} */
 
 @keyframes fadeOut {
   0% {
@@ -42,4 +42,8 @@
   #heroImg {
     margin-top: 2%;
   }
+}
+
+.hide{
+  display: none;
 }
