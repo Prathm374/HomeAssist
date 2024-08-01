@@ -5,7 +5,7 @@
       rgba(58, 46, 123, 0.4),
       rgba(58, 46, 123, 1)
     ),
-    url("../back.jpg");
+    url("../assets/back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* height: 100vh; */

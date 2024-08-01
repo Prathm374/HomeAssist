@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import logo from './Logo.svg';
+import logo from '../assets/Logo.svg';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { NavLink } from 'react-router-dom';
 

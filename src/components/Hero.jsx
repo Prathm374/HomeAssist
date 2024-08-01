@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img2 from "./2.png";
+import img2 from "../assets/2.png";
 import "./Hero.css";
 
 // Not Responsive
