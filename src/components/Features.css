@@ -1,0 +1,17 @@
+#abc{
+    border: 2px solid rgb(120, 229, 229);
+    border-radius: 8%;
+    box-shadow: 0 4px 8px rgba(34, 15, 53, 0.2), 0 6px 20px rgba(222, 212, 232, 0.19);
+    /* background: rgba(58, 46, 123,0.8); */
+}
+h3{
+    color: rgb(166, 196, 119);
+}
+#head{
+    color: beige;
+}
+
+#svgImg{
+    width: 45px;
+    margin-inline-end: 3%;
+}
