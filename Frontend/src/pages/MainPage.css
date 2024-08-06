@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
-.navHero {
+.navHero{
   background-image: linear-gradient(
       rgba(58, 46, 123, 0.4),
       rgba(58, 46, 123, 1)
@@ -13,7 +14,10 @@
     url("../assets/back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* height: 100vh; */
+}
+
+.loginNavHero{
+  padding-top: 14vh;
 }
 
 .feat {

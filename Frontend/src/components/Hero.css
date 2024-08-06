@@ -2,7 +2,7 @@
    animation: fadeOut .8s ease 0s 1 normal forwards;
 } */
 
-@keyframes fadeOut {
+/* @keyframes fadeOut {
   0% {
     transform: rotateY(0deg);
   }
@@ -36,6 +36,11 @@
   100% {
     transform: rotateY(90deg);
   }
+} */
+
+.loginForm{
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 998px) {

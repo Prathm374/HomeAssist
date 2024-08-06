@@ -4,13 +4,14 @@ import AboutPage from './pages/AboutPage.jsx';
 import Whoop404 from './pages/Whoop404.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
+import LoginPage from './pages/LoginPage.jsx';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<MainPage />} />
+          <Route index element={<LoginPage />} />
           <Route path='/home' element={<MainPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/service' element={<ServicesPage />} />    

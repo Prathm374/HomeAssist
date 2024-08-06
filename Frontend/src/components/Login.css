@@ -95,3 +95,28 @@
   text-decoration: none;
   font-weight: 600;
 }
+
+/* ToastStyles.css */
+
+.Toastify__toast {
+  border-radius: 8px;
+}
+
+.Toastify__toast--success {
+  background: lavender;
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: lavender; 
+  color: black;
+}
+
+.Toastify__toast-body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.Toastify__toast-container {
+  top: 20px;
+}

@@ -1,15 +1,15 @@
 import "./MainPage.css";
-import Navbar from "../components/Navbar";
+import LoginNav from "../components/LoginNav";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
 import services from "../services.json";
 import Footer from "../components/Footer";
 
-export default function Mainpage() {
+export default function LoginPage() {
   return (
     <div>
-      <div className="navHero">
-        <Navbar />
+      <div className="navHero loginNavHero">
+        <LoginNav />
         <Hero />
       </div>
       <div className="featHead">
@@ -21,7 +21,7 @@ export default function Mainpage() {
                 heading={service.heading}
                 services={service.services}
                 key={service.id}
-                text={service.text}
+                text={""}
                 image={service.image}
               />
             );

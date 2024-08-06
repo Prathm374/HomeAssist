@@ -8,7 +8,7 @@ import Login from "./Login";
 export default function Hero() {
   const [disp, setDisp] = useState(true);
   const [btnText, setBtnText] = useState("Get Started");
-  const [dispForm, setDispForm] = useState(false);
+  // const [dispForm, setDispForm] = useState(false);
 
   const handleGetStarted = () => {
     setDisp(!disp);
@@ -17,13 +17,13 @@ export default function Hero() {
     }
     else{
       setBtnText("Get Started");
-      setDispForm(false);
+      // setDispForm(false);
     }
   };
 
-  const handleLogin = () => {
-    setDispForm(true);
-  }; 
+  // const handleLogin = () => {
+  //   setDispForm(true);
+  // }; 
 
   return (
     <div>
@@ -67,11 +67,11 @@ export default function Hero() {
                 alt="HomeAssist Logo"
                 loading="lazy"
               />
-              <div className={disp || dispForm ? "hide" : "container d-flex col-6 justify-content-around"}>
+              {/* <div className={disp || dispForm ? "hide" : "container d-flex col-6 justify-content-around"}>
                 <button className="btn btn-primary" onClick={handleLogin}>Login</button>
                 <button className="btn btn-outline-info">Login</button>
-              </div>
-            <div className={dispForm ? "loginForm" : "hide"}><Login /></div>
+              </div> */}
+            <div className={disp ? "hide" : "loginForm"}><Login /></div>
           </div>
         </div>
       </div>
