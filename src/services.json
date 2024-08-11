@@ -11,7 +11,8 @@
             "Comprehensive interior and exterior window cleaning for a clear view.",
             "Expert carpet cleaning, hardwood floor installation, and tile and grout cleaning."
         ],
-        "image": "https://www.svgrepo.com/show/132066/cleaning-service.svg"
+        "image": "https://www.svgrepo.com/show/132066/cleaning-service.svg",
+        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
             "Safe and efficient electrical installations, upgrades, and repairs.",
             "Heating and cooling maintenance, system installations, and energy efficiency upgrades."
         ],
-        "image": "https://www.svgrepo.com/show/448112/repair-costs.svg"
+        "image": "https://www.svgrepo.com/show/448112/repair-costs.svg",
+        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
     },
     {
         "id": 3,
@@ -39,7 +41,8 @@
             "Effective pest inspections, exterminations, and preventative treatments.",
             "Snow removal, holiday lighting, and pool maintenance for year-round care."
         ],
-        "image": "https://www.svgrepo.com/show/422954/garden-planting-flower.svg"
+        "image": "https://www.svgrepo.com/show/422954/garden-planting-flower.svg",
+        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
     },
     {
         "id": 4,
@@ -53,6 +56,7 @@
             "Convenient grocery shopping, prescription pick-up, and package delivery.",
             "Personalized travel arrangements, event planning, and personal shopping assistance."
         ],
-        "image": "https://www.svgrepo.com/show/287639/pet-dog.svg"
+        "image": "https://www.svgrepo.com/show/287639/pet-dog.svg",
+        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
     }
 ] 

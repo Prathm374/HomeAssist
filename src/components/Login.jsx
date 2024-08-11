@@ -55,6 +55,7 @@ export default function Login() {
                     <label style={{color: "#54D1C9"}}><input type="checkbox" /> Remember Me </label>
                     <a href="/">Forgot Password?</a>
                 </div>
+                {/* Add Google oAuth Here:  */}
                 <div className="register-link">
                     <p>Don't have an account? <NavLink to={"/signup"}>Register</NavLink></p>
                 </div>

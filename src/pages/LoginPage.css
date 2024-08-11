@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.navHero {
+    background-image: linear-gradient(
+            rgba(58, 46, 123, 0.4),
+            rgba(58, 46, 123, 1)
+        ),
+        url("../assets/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loginNavHero {
+    padding-top: 14vh;
+    height: 100vh;
+}
+
+.feat {
+    display: flex;
+    margin-inline: 3%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.featHead > h2 {
+    text-transform: capitalize;
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    width: 95%;
+    margin-top: 2%;
+    color: aqua;
+    border-bottom: 2px solid aqua;
+}
+
+.featHead {
+    background-image: linear-gradient(
+        rgba(58, 46, 123, 1),
+        rgba(58, 46, 123, 0.8)
+    );
+    width: 100%;
+    padding-top: 1%;
+}
+
+/*features.css*/
+
+#abc {
+    border: 2px solid rgb(120, 229, 229);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(34, 15, 53, 0.2),
+        0 6px 20px rgba(222, 212, 232, 0.19);
+    /* background: rgba(58, 46, 123,0.8); */
+}
+h3 {
+    color: rgb(166, 196, 119);
+}
+#head {
+    color: beige;
+}
+
+#svgImg {
+    width: 35px;
+    margin-inline-end: 3%;
+}
+
+/*Hammered Card*/
+
+@keyframes hammerIn {
+    0% {
+        transform: scale(2) translateY(-300px);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.5) translateY(0);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1) translateY(-10px);
+    }
+    80% {
+        transform: scale(1.05) translateY(5px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* .hammered-card {
+  animation: hammerIn 1s ease-out forwards;
+} */
+
+/*Features Section: */
+
+.logft {
+    height: 75vh;
+    width: fit-content;
+    min-width: 75vh;
+    position: relative;
+}
+
+.logft > .corners {
+    height: 35vh;
+    border: 2px solid lavender;
+    margin: 10px;
+    width: 35vh;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.458);
+    transition: all 0.3s ease-in-out;
+}
+
+.c1 {
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 500%;
+    position: absolute;
+    background: radial-gradient(
+        circle at 100% 100%,
+        #d2accb,
+        #be77b1 30%,
+        #cca3c4 60%,
+        #c6a8c1 90%
+    );
+    top: 0;
+    left: 0;
+}
+
+.c2 {
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 500%;
+    position: absolute;
+    background: radial-gradient(
+        circle at 0% 100%,
+        #d2accb,
+        #be77b1 30%,
+        #cca3c4 60%,
+        #c6a8c1 90%
+    );
+    top: 0;
+    right: 0;
+}
+
+.c3 {
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 500%;
+    position: absolute;
+    background: radial-gradient(
+        circle at 100% 0%,
+        #d2accb,
+        #be77b1 30%,
+        #cca3c4 60%,
+        #c6a8c1 90%
+    );
+    bottom: 0;
+    left: 0;
+}
+
+.c4 {
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 500%;
+    position: absolute;
+    background: radial-gradient(
+        circle at 0% 0%,
+        #d2accb,
+        #be77b1 30%,
+        #cca3c4 60%,
+        #c6a8c1 90%
+    );
+    bottom: 0;
+    right: 0;
+}
+
+.logft .corners:hover {
+    width: 100%;
+    height: 35vh;
+    border-radius: 30px;
+}
+
+.logft .corners:hover span{
+  transform: rotateZ(0deg);
+  position: absolute;
+  margin-top: 2%;
+  margin-left: 4%;
+  font-size: x-large;
+}
+
+.c4:hover span, .c2:hover span{
+  margin-right: 4%;
+  top: 0;
+  right: 0;
+}
+
+.c1:hover,
+.c3:hover {
+    left: -45vh;
+}
+
+.c2:hover,
+.c4:hover {
+    right: -45vh;
+}
+
+.logft .circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px dashed rgb(152, 114, 250);
+    border-left: 5px dotted rgb(0, 153, 255);
+    border-right: 5px dotted rgb(225, 0, 255);
+    background-color: rgb(229, 145, 226);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate3D(-50%, -50%, 0);
+}
+
+.logft .circle img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
+.corners span{
+  font-size: larger;
+  color: darkgreen;
+  font-weight: 700;
+  display: block;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.c1 > span, .c4 > span{
+  transform: rotateZ(-45deg);
+  margin: 45% 10% auto auto;
+}
+
+.c2 > span, .c3 > span{
+  transform: rotateZ(45deg);
+  margin-top: 45%;
+}

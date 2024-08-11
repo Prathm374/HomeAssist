@@ -11,8 +11,8 @@
   border-radius: 10px;
   border: 2px solid rgb(13, 202, 240);
   padding: 30px 40px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 }
 
 .wrap h1 {

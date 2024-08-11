@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LoginHero.css";
 import Login from "./Login";
-import { useNavigate, NavLink } from 'react-router-dom';
+import { useNavigate, NavLink } from "react-router-dom";
 
 export default function LoginHero() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function LoginHero() {
   const handleScrollDown = () => {
     window.scrollBy({
       top: window.innerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -38,21 +38,50 @@ export default function LoginHero() {
               <button
                 onClick={handleGetStarted}
                 type="button"
-                className="btn btn-light btn-lg px-4 me-md-2"
-              >
-                Get Started
+                className="cssbuttons-io-button" >
+                Get started
+                <div class="icon">
+                  <svg
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </button>
               <button
                 onClick={handleScrollDown}
                 type="button"
-                className="btn btn-outline-info btn-lg px-4 text-light"
+                className="cssbuttons-io-button btn2"
               >
                 Learn More
+                <div class="icon">
+                  <svg
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
               </button>
             </div>
           </div>
           <div className="col-10 col-sm-8 col-lg-6 heroLogin">
-            <div className="loginForm"><Login /></div>
+            <div className="loginForm">
+              <Login />
+            </div>
           </div>
         </div>
       </div>
