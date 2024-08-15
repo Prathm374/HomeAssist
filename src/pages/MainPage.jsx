@@ -6,6 +6,9 @@ import services from "../services.json";
 import Footer from "../components/Footer";
 
 export default function Mainpage() {
+
+  // document.querySelector(".feat:nth-child(2)").classList.add("flex-row-reverse"); 
+
   return (
     <div>
       <div className="navHero">
@@ -13,7 +16,7 @@ export default function Mainpage() {
         <Hero />
       </div>
       <div className="featHead">
-        <h2>comprehensive services tailored to your needs</h2>
+        <h2>Services Crafted Uniqu<span className="text-dark">ely for You: </span></h2>
         <div className="feat">
           {services.map((service) => {
             return (

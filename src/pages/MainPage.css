@@ -11,7 +11,7 @@
       rgba(58, 46, 123, 0.4),
       rgba(58, 46, 123, 1)
     ),
-    url("../assets/back.jpg");
+    url("../assets/back1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -23,19 +23,27 @@
 
 .feat {
   display: flex;
-  margin-inline: 3%;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-inline: 2%;
+  /* flex-wrap: wrap; */
+}
+
+.feat div:nth-child(2), div:nth-child(4){
+  flex-direction: row-reverse;
 }
 
 .featHead > h2 {
-  text-transform: capitalize;
   font-family: "Poppins", sans-serif;
-  margin: auto;
+  margin: auto; 
   width: 95%;
   margin-top: 2%;
-  color: aqua;
-  border-bottom: 2px solid aqua;
+  color: white;
+  border-bottom: 2px solid black;
+  border-image: linear-gradient(to right, #000 50%, transparent 50%) 100% 1;
+}
+
+.highlight{
+  background-color: rgba(195, 241, 125, 0.373);
 }
 
 .featHead {
