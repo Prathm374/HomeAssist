@@ -1,15 +1,12 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./AboutPgae.css";
 
 export default function AboutPage() {
-  return (
-    
-      <div>
-      <div className='navHero'>
-        <Navbar />
-      </div>
-      hello from about page
-      <Footer/>
-    </div>
-  )
+    return (
+            <div className="navHero aboutpg">
+                <Navbar />
+                <Footer />
+            </div>
+    );
 }

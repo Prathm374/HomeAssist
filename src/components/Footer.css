@@ -11,7 +11,7 @@ footer {
   position: relative;
   width: 100%;
   background: linear-gradient(rgba(58, 46, 123, 0.8), rgba(58, 46, 123, 0.6));
-  min-height: 100px;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -20,11 +20,12 @@ footer {
 #footlogo {
   width: 30%;
   font-weight: 400;
+  color: rgb(140, 231, 245);
 }
 
 footer a{
     text-decoration: none;
-    color: black;
+    color: rgb(140, 231, 245);
     font-weight: 400;
 }
 

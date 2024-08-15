@@ -1,0 +1,10 @@
+.aboutpg{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.aboutpg footer{
+    position: fixed;
+    bottom: 0;
+    background: none;
+}

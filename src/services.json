@@ -12,8 +12,7 @@
             "Expert carpet cleaning, hardwood floor installation, and tile and grout cleaning."
         ],
         "image": "https://www.svgrepo.com/show/132066/cleaning-service.svg",
-        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
-    },
+        "altText": "Our home care services ensure your living space is spotless, organized, and welcoming. We offer professional house cleaning, home organization, window cleaning, and expert flooring services, all tailored to keep your home in top condition."    },
     {
         "id": 2,
         "heading": "Systems & Repair Solutions",
@@ -27,7 +26,7 @@
             "Heating and cooling maintenance, system installations, and energy efficiency upgrades."
         ],
         "image": "https://www.svgrepo.com/show/448112/repair-costs.svg",
-        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
+        "altText": "Keep your home systems running smoothly with our repair and maintenance services. From handyman tasks and plumbing repairs to safe electrical work and comprehensive HVAC services, we cover all aspects of home upkeep with precision."
     },
     {
         "id": 3,
@@ -42,7 +41,7 @@
             "Snow removal, holiday lighting, and pool maintenance for year-round care."
         ],
         "image": "https://www.svgrepo.com/show/422954/garden-planting-flower.svg",
-        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
+        "altText": "Enhance your outdoor space with our garden and exterior services. We provide lawn and garden care, pressure washing for a pristine exterior, effective pest control, and seasonal services to maintain the beauty and functionality of your outdoor areas."
     },
     {
         "id": 4,
@@ -57,6 +56,6 @@
             "Personalized travel arrangements, event planning, and personal shopping assistance."
         ],
         "image": "https://www.svgrepo.com/show/287639/pet-dog.svg",
-        "altText": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, corrupti?"
+        "altText": "Our personal and pet support services are designed to make your life easier. We offer compassionate senior assistance, reliable pet care, convenient errand running, and personalized concierge services to meet your everyday needs with care and professionalism."
     }
-] 
+]
