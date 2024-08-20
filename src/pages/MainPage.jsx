@@ -7,8 +7,6 @@ import Footer from "../components/Footer";
 
 export default function Mainpage() {
 
-  // document.querySelector(".feat:nth-child(2)").classList.add("flex-row-reverse"); 
-
   return (
     <div>
       <div className="navHero">

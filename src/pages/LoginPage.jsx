@@ -45,7 +45,7 @@ export default function LoginPage() {
                 <Hero />
             </div>
             <div className="featHead">
-                <h2>comprehensive services tailored to your needs</h2>
+                <h2>Comprehensive Services Tailored To Your Needs</h2>
                 {/* <div className="feat hammered-card">
                       <img src={pin} alt="Svg" id="svgImg" />
                         {services.map((service) => {
