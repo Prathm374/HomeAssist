@@ -1,8 +1,8 @@
 #abc{
-    border: 2px solid rgb(120, 229, 229);
+    /* border: 2px solid rgb(120, 229, 229); */
     border-radius: 5vh;
-    box-shadow: 0 4px 8px rgba(34, 15, 53, 0.2), 0 6px 20px rgba(222, 212, 232, 0.19);
-    /* background: rgba(58, 46, 123,0.8); */
+    box-shadow: 0 8px 16px rgba(34, 15, 53, 0.5), 0 12px 40px rgba(222, 212, 232,0.5);
+    background: rgba(58, 46, 123, 0.8);
 }
 h3{
     color: rgb(166, 196, 119);
@@ -14,4 +14,56 @@ h3{
 #svgImg{
     width: 45px;
     margin-inline-end: 3%;
+}
+
+.mpimg img{
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+/*hehehe*/
+
+#abc:hover{
+    transform: scale(1.05);
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+#abc:hover {
+	position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#000, #000), linear-gradient(#fff, #fff), linear-gradient(#000, #000), linear-gradient(#fff, #fff);
+		animation: rotate 4s linear infinite;
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: rgba(58, 46, 123);
+		border-radius: 5px;
+	}
 }

@@ -34,7 +34,8 @@
 }
 
 .featHead > h2 {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: cursive;
   margin: auto; 
   width: 95%;
   margin-top: 2%;
