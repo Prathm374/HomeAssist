@@ -4,7 +4,7 @@ import { FaChevronRight } from "react-icons/fa";
 import img from '../assets/2.png'
 import mpone from '../assets/mpone.png'
 
-export default function features({ heading, services, text, image, mpimg }) {
+export default function features({ heading, services, text, image }) {
     return (
         <div className="d-flex pt-5 mt-5">
             <div
