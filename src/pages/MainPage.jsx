@@ -14,7 +14,7 @@ export default function Mainpage() {
         <Hero />
       </div>
       <div className="featHead">
-        <h2>Services Crafted Uniquel<span className="text-dark">y for You: </span></h2>
+        <h2>Services Crafted Uniquely for You</h2>
         <div className="feat">
           {services.map((service) => {
             return (

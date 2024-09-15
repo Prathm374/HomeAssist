@@ -34,14 +34,14 @@
 }
 
 .featHead > h2 {
-  /* font-family: "Poppins", sans-serif; */
-  font-family: cursive;
-  margin: auto; 
+  font-family: "Poppins", sans-serif;
+  /* font-family: cursive; */
+  margin: auto;
   width: 95%;
-  margin-top: 2%;
+  margin-top: 15%;
   color: white;
-  border-bottom: 2px solid black;
-  border-image: linear-gradient(to right, #000 50%, transparent 50%) 100% 1;
+  border-block: 3px solid black;
+  border-image: linear-gradient(to right, transparent 5%, #000 50%, transparent 95%) 100% 1;
 }
 
 .highlight{
@@ -55,4 +55,5 @@
   );
   width: 100%;
   padding-top: 1%;
+  text-align: center;
 }

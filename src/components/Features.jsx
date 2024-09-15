@@ -11,7 +11,7 @@ export default function features({ heading, services, text, image }) {
                 className="container px-4 pt-5 col-lg-6 col-md-6 col-sm-11 my-5"
                 id="abc"
             >
-                <h2 className="pb-2 border-bottom" id="head">
+                <h2 className="pb-2" id="head">
                     <img src={image} alt="Svg" id="svgImg" />
                     {heading}
                 </h2>
@@ -20,25 +20,25 @@ export default function features({ heading, services, text, image }) {
                     <div className="col d-flex align-items-start col-lg-6 col-md-6 col-sm-11">
                         <div>
                             <h3 className="fw-bold mb-0 fs-4">{services[0]}</h3>
-                            <p className="text-light">{text[0]}</p>
+                            <p className="text-dark">{text[0]}</p>
                         </div>
                     </div>
                     <div className="col d-flex align-items-start col-lg-6 col-md-6 col-sm-11">
                         <div>
                             <h3 className="fw-bold mb-0 fs-4">{services[1]}</h3>
-                            <p className="text-light">{text[1]}</p>
+                            <p className="text-dark">{text[1]}</p>
                         </div>
                     </div>
                     <div className="col d-flex align-items-start col-lg-6 col-md-6 col-sm-11">
                         <div>
                             <h3 className="fw-bold mb-0 fs-4">{services[2]}</h3>
-                            <p className="text-light">{text[2]}</p>
+                            <p className="text-dark">{text[2]}</p>
                         </div>
                     </div>
                     <div className="col d-flex align-items-start col-lg-6 col-md-6 col-sm-11">
                         <div>
                             <h3 className="fw-bold mb-0 fs-4">{services[3]}</h3>
-                            <p className="text-light">{text[3]}</p>
+                            <p className="text-dark">{text[3]}</p>
                         </div>
                     </div>
                 </div>
