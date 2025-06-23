@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+.navHero{
+  background-image: linear-gradient(
+      rgba(58, 46, 123, 0.4),
+      rgba(58, 46, 123, 1)
+    ),
+    url("../assets/back1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginNavHero{
+  padding-top: 14vh;
+  height: 100vh;
+}
+
+.feat {
+  display: flex;
+  flex-direction: column;
+  margin-inline: 2%;
+  /* flex-wrap: wrap; */
+}
+
+.feat > div:nth-child(2), 
+.feat > div:nth-child(4){
+  flex-direction: row-reverse;  
+}
+
+.featHead > h2 {
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  width: 95%;
+  margin-top: 15%;
+  color: white;
+  border-block: 3px solid black;
+  border-image: linear-gradient(to right, transparent 5%, #000 50%, transparent 95%) 100% 1;
+}
+
+.highlight{
+  background-color: rgba(195, 241, 125, 0.373);
+}
+
+.featHead {
+  background-image: linear-gradient(
+    rgba(58, 46, 123, 1),
+    rgba(58, 46, 123, 0.8)
+  );
+  width: 100%;
+  padding-top: 1%;
+  text-align: center;
+}
