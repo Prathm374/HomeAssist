@@ -1,8 +1,7 @@
-import React from "react";
 import "./Features.css";
-import { FaChevronRight } from "react-icons/fa";
-import img from '../assets/2.png'
-import mpone from '../assets/mpone.png'
+// import { FaChevronRight } from "react-icons/fa";
+// import img from '../assets/2.png'
+// import mpone from '../assets/mpone.png'
 
 export default function features({ heading, services, text, image }) {
     return (
@@ -44,7 +43,7 @@ export default function features({ heading, services, text, image }) {
                 </div>
             </div>
             <div className="container px-4 py-5 col-lg-5 col-md-5 col-sm-11 my-5 mpimg">
-                <img src={image} alt="Image related to text." />
+                <img src={image} alt="Related to text" />
             </div>
         </div>
     );

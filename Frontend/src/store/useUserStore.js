@@ -1,7 +1,8 @@
 import { create } from "zustand";
+import { persist } from 'zustand/middleware';
 import { login, signup, getMe, google } from "../api/auth.js";
 
-export const useUserStore = create((set, get) => ({
+export const useUserStore = create(persist((set, get) => ({
   user: null,
   token: localStorage.getItem("token") || null,
 
@@ -50,6 +51,7 @@ export const useUserStore = create((set, get) => ({
 
   logoutUser: () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("adminModalShown");
     set({ user: null, token: null });
   },
 
@@ -87,4 +89,4 @@ export const useUserStore = create((set, get) => ({
       return { success: false, message: error.message || "Server Error" };
     }
   }
-}));
+}), { name: 'user-store'}));

@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./LoginPage.css";
 import LoginNav from "../components/LoginNav";
 import Hero from "../components/LoginHero";
-import services from "../services.json";
-import Footer from "../components/Footer";
-import pin from "../assets/pin-unscreen.gif";
-import workerImg from "../assets/file.png";
+// import services from "../services.json";
+// import Footer from "../components/Footer";
+// import pin from "../assets/pin-unscreen.gif";
+// import workerImg from "../assets/file.png";
 import { useUserStore } from "../store/useUserStore.js";
 import { useNavigate } from "react-router-dom";
-import { use } from "react";
 
 export default function LoginPage() {
   const token = useUserStore((state) => state.token);
@@ -17,7 +16,7 @@ export default function LoginPage() {
     if (token) {
       navigate("/home");
     }
-  }, [token]);
+  }, [token, navigate]);
   return (
     <div>
       <div className="navHero loginNavHero">
@@ -36,7 +35,7 @@ export default function LoginPage() {
                         );
                     })}
                     <div className="circle d-flex align-items-center justify-content-center">
-                        <img src={workerImg} />
+                        <img src={workerImg} alt="Worker Img"/>
                     </div>
                 </div>
             </div> 

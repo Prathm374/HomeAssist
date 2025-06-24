@@ -65,21 +65,21 @@ export default function Navbar() {
                 Profile
               </button>
             </li>
-            <li>
-              <button className="dropdown-item" onClick={handleLogout}>
-                Logout
-              </button>
-            </li>
             {user?.role === "admin" && (
               <li>
                 <button
                   className="dropdown-item"
                   onClick={() => navigate("/admin")}
                 >
-                  Switch to Admin Panel
+                  Switch to Admin
                 </button>
               </li>
             )}
+            <li>
+              <button className="dropdown-item" onClick={handleLogout}>
+                Logout
+              </button>
+            </li>
           </ul>
         </div>
       </nav>

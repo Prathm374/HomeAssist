@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import "./LoginHero.css";
 import Login from "./Login";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginHero() {
   const navigate = useNavigate();

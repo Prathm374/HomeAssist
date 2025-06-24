@@ -20,7 +20,7 @@ const SignupPage = () => {
     }
   };
   return (
-    <div className="vh-100">
+    <div className="vh-100" style={{"overflow": "hidden"}}>
       <div
         className="container shadow-lg rounded-3 vstack gap-4"
         style={{ marginTop: "10%", width: "25%" }}

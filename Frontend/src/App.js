@@ -15,7 +15,7 @@ function App() {
   const fetchUserFromToken = useUserStore((state) => state.fetchUserFromToken);
   useEffect(() => {
     fetchUserFromToken();
-  }, []);
+  }, [fetchUserFromToken]);
   return (
     <>
       <BrowserRouter>

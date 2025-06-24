@@ -71,7 +71,7 @@ export default function ServicesPage() {
 
     setAppointmentDate(dateStr);
     setAppointmentTime(timeStr);
-  }, [user]);
+  }, [user, fetchOrders]);
   const [showForm, setShowForm] = useState(true);
   const [editingOrderId, setEditingOrderId] = useState(null);
   const [services, setServices] = useState([]);

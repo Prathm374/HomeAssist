@@ -19,6 +19,7 @@
 .loginNavHero{
   padding-top: 14vh;
   height: 100vh;
+  overflow: hidden;
 }
 
 .feat {

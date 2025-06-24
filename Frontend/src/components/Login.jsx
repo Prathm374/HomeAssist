@@ -4,14 +4,13 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
 import { useUserStore } from "../store/useUserStore.js";
-import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { loginUser } = useUserStore();
-  const { loginWithGoogle } = useUserStore();
+  const { loginUser, loginWithGoogle } = useUserStore();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -38,7 +37,6 @@ export default function Login() {
           />
           <i className="bx bxs-user"></i>
         </div>
-
         <div className="input-box">
           <input
             type="password"
@@ -50,17 +48,15 @@ export default function Login() {
           <i className="bx bxs-lock-alt"></i>
         </div>
         <div className="oAuth">
-          <GoogleOAuthProvider clientId="380004990062-dflni0kn42ouhv943feb9m7f8655ln5h.apps.googleusercontent.com">
-            <GoogleLogin
-              onSuccess={async (credentialResponse) => {
-                const token = credentialResponse.credential;
-                await loginWithGoogle(token);
-              }}
-              onError={() => {
-                alert("Google login failed.");
-              }}
-            />
-          </GoogleOAuthProvider>
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              const token = credentialResponse.credential;
+              await loginWithGoogle(token);
+            }}
+            onError={() => {
+              alert("Google login failed.");
+            }}
+          />
         </div>
         <div className="register-link">
           <p>
