@@ -11,14 +11,14 @@ export default function LoginHero() {
 
   const handleScrollDown = () => {
     window.scrollBy({
-      top: window.innerHeight,
+      top: window.innerHeight * 1.2,
       behavior: "smooth",
     });
   };
 
   return (
     <div>
-      <div className="container col-xxl-8 px-4 py-5">
+      <div className="container  mx-auto col-xxl-8 px-4 py-5">
         <div className="row flex-lg-row align-items-center g-5 py-5">
           <div className="col-lg-6">
             <h1 className="display-5 fw-bold text-info lh-1 mb-3">
@@ -57,7 +57,7 @@ export default function LoginHero() {
               <button
                 onClick={handleScrollDown}
                 type="button"
-                className="cssbuttons-io-button btn2"
+                className="cssbuttons-io-button"
               >
                 Learn More
                 <div className="icon">
@@ -78,7 +78,7 @@ export default function LoginHero() {
             </div>
           </div>
           <div className="col-10 col-sm-8 col-lg-6 heroLogin">
-            <div className="loginForm">
+            <div className="d-flex justify-content-center">
               <Login />
             </div>
           </div>

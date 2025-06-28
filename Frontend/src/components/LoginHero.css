@@ -1,10 +1,4 @@
-.loginForm {
-  display: flex;
-  justify-content: center;
-}
-
 .cssbuttons-io-button {
-  /* background: #a370f0; */
   background: none;
   color: white;
   font-family: inherit;

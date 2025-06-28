@@ -49,7 +49,7 @@ export default function Navbar() {
           <ul className="dropdown-menu dropdown-menu-end">
             <li>
               <span
-                className="dropdown-item-text text-muted fw-bold"
+                className="dropdown-item-text text-gray-500 fw-bold"
                 title={user?.username}
               >
                 {user?.username?.length > 12
@@ -76,7 +76,7 @@ export default function Navbar() {
               </li>
             )}
             <li>
-              <button className="dropdown-item" onClick={handleLogout}>
+              <button className="dropdown-item text-danger" onClick={handleLogout}>
                 Logout
               </button>
             </li>

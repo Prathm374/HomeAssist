@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className="wrap">
       <form onSubmit={handleLogin}>
-        <h1 className="text-dark">Login</h1>
+        <h1 className="text-gray-900">Login</h1>
         <div className="input-box">
           <input
             type="text"

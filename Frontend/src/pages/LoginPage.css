@@ -9,57 +9,43 @@
     height: 35vh;
     border: 2px solid silver;
     margin: 10px;
-    width: 35vh;
+    width: 100%;
     background: transparent;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.458);
     transition: all 0.3s ease-in-out;
+    border-radius: 10%;
+    position: absolute;
 }
 
 .c1 {
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-top-left-radius: 500%;
-    position: absolute;
     top: 0;
     left: 0;
 }
 
 .c2 {
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 500%;
-    position: absolute;
     top: 0;
     right: 0;
 }
 
 .c3 {
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 500%;
-    position: absolute;
     bottom: 0;
     left: 0;
 }
 
 .c4 {
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 500%;
-    position: absolute;
     bottom: 0;
     right: 0;
 }
 
-.logft .corners:hover {
+.logft .corners {
     width: 100%;
     height: 35vh;
     border-radius: 30px;
 }
 
-.logft .corners:hover span{
+.logft .corners span{
   transform: rotateZ(0deg);
   position: absolute;
   margin-top: 2%;
@@ -67,19 +53,19 @@
   font-size: x-large;
 }
 
-.c4:hover span, .c2:hover span{
+.c4 span, .c2 span{
   margin-right: 4%;
   top: 0;
   right: 0;
 }
 
-.c1:hover,
-.c3:hover {
+.c1,
+.c3 {
     left: -45vh;
 }
 
-.c2:hover,
-.c4:hover {
+.c2,
+.c4 {
     right: -45vh;
 }
 
@@ -122,20 +108,15 @@
   margin-top: 45%;
 }
 
-.logft .corners p{
-    opacity: 0;
+.corners p{
     color: white;
-    transition: all 0.3s ease-in;
-}
-
-.corners:hover p{
-    opacity: 1;
     top: 0;
     width: 80%;
     margin: 15% 10%;
+    transition: all 0.3s ease-in;
 }
 
-.c2:hover p,
-.c4:hover p{
+.c2 p,
+.c4 p{
     margin-inline: 15% auto;
 }

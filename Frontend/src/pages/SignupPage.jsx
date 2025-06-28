@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useUserStore } from "../store/useUserStore.js";
 import { useNavigate } from "react-router-dom";
 
-const SignupPage = () => {
+export default function SignupPage(){
   const [newUser, setNewUser] = useState({
     username: "",
     password: "",
@@ -66,5 +66,3 @@ const SignupPage = () => {
     </div>
   );
 };
-
-export default SignupPage;

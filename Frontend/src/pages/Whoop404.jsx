@@ -1,4 +1,3 @@
-import React from "react";
 import "./Whoop404.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

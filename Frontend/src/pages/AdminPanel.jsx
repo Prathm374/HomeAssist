@@ -27,10 +27,10 @@ export default function AdminPanel() {
     <>
       {/* Top Navbar */}
       <nav
-        className="navbar bg-light shadow-sm px-4 d-flex justify-content-between align-items-center w-100"
+        className="navbar bg-gray-100 shadow-sm px-4 d-flex justify-content-between align-items-center w-100"
         style={{ borderRadius: "0px" }}
       >
-        <span className="navbar-brand fw-bold m-0">HomeAssist Admin Panel</span>
+        <span className="navbar-brand fw-bold m-0">Admin Panel</span>
         <div className="dropdown">
           <button
             className="btn btn-outline-secondary dropdown-toggle"
@@ -42,7 +42,7 @@ export default function AdminPanel() {
           </button>
           <ul className="dropdown-menu dropdown-menu-end">
             <li>
-              <span className="dropdown-item-text text-muted">{username}</span>
+              <span className="dropdown-item-text text-gray-500 fw-bold "  title={user?.username}>{username}</span>
             </li>
             <li>
               <hr className="dropdown-divider" />

@@ -1,21 +1,10 @@
 import "./Footer.css";
 import { FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
-// import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer>
       <div id="footlogo">&copy; 2024 | HomeAssist | All Rights Reserved</div>
-
-      {/* <div>
-                <NavLink to="/about">About Us</NavLink>
-            </div>
-            <div>
-                <NavLink to="/service">Services</NavLink>
-            </div>
-            <div>
-                <NavLink to="/contact">Contact</NavLink>
-            </div> */}
       <div className="connectUs">
         <a href="https://github.com/Prathm374" target="_blank" rel="noreferrer">
           <FaGithub />
