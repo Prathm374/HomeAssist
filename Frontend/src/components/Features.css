@@ -33,3 +33,12 @@ h3 {
     width: 100%;
     aspect-ratio: 3/2;
 }
+
+@media (max-width: 1024px) {
+    #abc {
+        width: 100%;
+    }
+    .mpimg {
+        display: none;
+    }
+}

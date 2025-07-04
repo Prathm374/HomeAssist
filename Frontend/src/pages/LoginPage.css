@@ -1,122 +1,52 @@
-.logft {
-    height: 75vh;
-    width: fit-content;
-    min-width: 75vh;
-    position: relative;
+.features-row {
+  gap: 2rem;
+  padding: 3rem 1rem;
 }
 
-.logft > .corners {
-    height: 35vh;
-    border: 2px solid silver;
-    margin: 10px;
-    width: 100%;
-    background: transparent;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.458);
-    transition: all 0.3s ease-in-out;
-    border-radius: 10%;
-    position: absolute;
+.feature-card {
+  width: 300px;
+  min-height: 180px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-.c1 {
-    top: 0;
-    left: 0;
+.feature-card:hover {
+  transform: scale(1.05);
 }
 
-.c2 {
-    top: 0;
-    right: 0;
+.feature-card h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.c3 {
-    bottom: 0;
-    left: 0;
+.feature-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
 }
 
-.c4 {
-    bottom: 0;
-    right: 0;
+.center-image {
+  width: 250px;
+  height: 250px;
+  border: 5px dashed #9966ff;
+  background-color: #f0c7f9;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.logft .corners {
-    width: 100%;
-    height: 35vh;
-    border-radius: 30px;
+.center-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.logft .corners span{
-  transform: rotateZ(0deg);
-  position: absolute;
-  margin-top: 2%;
-  margin-left: 4%;
-  font-size: x-large;
-}
-
-.c4 span, .c2 span{
-  margin-right: 4%;
-  top: 0;
-  right: 0;
-}
-
-.c1,
-.c3 {
-    left: -45vh;
-}
-
-.c2,
-.c4 {
-    right: -45vh;
-}
-
-.logft .circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 2px dashed rgb(152, 114, 250);
-    border-left: 5px dotted rgb(0, 153, 255);
-    border-right: 5px dotted rgb(225, 0, 255);
-    background-color: rgb(229, 145, 226);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    overflow: hidden;
-    transform: translate3D(-50%, -50%, 0);
-}
-
-.logft .circle img {
-    width: 100%;
-    height: 100%;
-}
-
-.corners span{
-  font-size: larger;
-  color: rgb(200, 200, 244);
-  font-weight: 700;
-  display: block;
-  width: fit-content;
-  transition: all 0.3s ease-in-out;
-}
-
-.c1 > span, .c4 > span{
-  transform: rotateZ(-45deg);
-  margin: 45% 10% auto auto;
-}
-
-.c2 > span, .c3 > span{
-  transform: rotateZ(45deg);
-  margin-top: 45%;
-}
-
-.corners p{
-    color: white;
-    top: 0;
-    width: 80%;
-    margin: 15% 10%;
-    transition: all 0.3s ease-in;
-}
-
-.c2 p,
-.c4 p{
-    margin-inline: 15% auto;
+@media (max-width: 1024px) {
+  .features-row {
+    flex-direction: column;
+  }
 }

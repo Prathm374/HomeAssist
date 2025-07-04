@@ -4,7 +4,7 @@ import Footer from "../components/Footer.jsx";
 import { useUserStore } from "../store/useUserStore.js";
 import { useOrderStore } from "../store/useOrderStore.js";
 import "./ServicesPage.css";
-import axios from "../api/axiosInstance.js";
+import { useServiceStore } from "../store/useServiceStore.js";
 
 const OrderCard = ({ order, onEdit, onCancel, onComplete }) => (
   <div className="order-card">
@@ -61,7 +61,7 @@ export default function ServicesPage() {
     cancelOrder,
     completeOrder,
   } = useOrderStore();
-
+  const { services, fetchServices } = useServiceStore();
   useEffect(() => {
     fetchOrders();
     fetchServices();
@@ -74,22 +74,12 @@ export default function ServicesPage() {
   }, [user, fetchOrders]);
   const [showForm, setShowForm] = useState(true);
   const [editingOrderId, setEditingOrderId] = useState(null);
-  const [services, setServices] = useState([]);
   const [selectedServices, setSelectedServices] = useState([]);
   const [appointmentDate, setAppointmentDate] = useState("");
   const [appointmentTime, setAppointmentTime] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [paymentMode, setPaymentMode] = useState("");
-
-  const fetchServices = async () => {
-    try {
-      const res = await axios.get("/services");
-      setServices(res.data.data || []);
-    } catch (error) {
-      console.error("Failed to load services: ", error);
-    }
-  };
 
   const handleServiceToggle = (serviceId, cost) => {
     setSelectedServices((prev) =>

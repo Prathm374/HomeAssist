@@ -1,3 +1,7 @@
+import { FaEdit } from "react-icons/fa";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useAdminStore } from "../../store/useAdminStore.js";
 import { useEffect, useState } from "react";
 
@@ -21,15 +25,25 @@ export default function ServicesTab() {
   };
 
   const handleSave = async () => {
-    await updateService(editingService._id, form);
-    setEditingService(null);
-    loadServices();
+    const res = await updateService(editingService._id, form);
+    if (res.success) {
+      toast.success(res.message || "Service updated successfully");
+      setEditingService(null);
+      loadServices();
+    } else {
+      toast.error(res.message || "Failed to update service");
+    }
   };
 
   const handleDelete = async (id) => {
     if (window.confirm("Delete this service?")) {
-      await deleteService(id);
-      loadServices();
+      const res = await deleteService(id);
+      if (res.success) {
+        toast.success(res.message || "Service deleted successfully");
+        loadServices();
+      } else {
+        toast.error(res.message || "Failed to delete service");
+      }
     }
   };
 
@@ -61,20 +75,20 @@ export default function ServicesTab() {
                   className="btn btn-warning btn-sm me-2"
                   onClick={() => handleEdit(service)}
                 >
-                  Edit
+                  <FaEdit/>
                 </button>
                 <button
                   className="btn btn-danger btn-sm"
                   onClick={() => handleDelete(service._id)}
                 >
-                  Delete
+                  <RiDeleteBin5Fill />
                 </button>
               </div>
             </div>
           </div>
         </div>
       ))}
-
+      <ToastContainer />
       {editingService && (
         <div className="modal show d-block" tabIndex="-1">
           <div className="modal-dialog modal-dialog-centered">

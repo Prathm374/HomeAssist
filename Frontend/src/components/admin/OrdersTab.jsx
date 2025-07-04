@@ -1,5 +1,9 @@
+import { FaEdit } from 'react-icons/fa';
+import { RiDeleteBin5Fill } from 'react-icons/ri';
 import { useAdminStore } from '../../store/useAdminStore.js';
 import { useEffect, useState } from 'react';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function OrdersTab() {
   const {
@@ -43,16 +47,26 @@ export default function OrdersTab() {
 
   const handleSave = async () => {
     setSaving(true);
-    await updateOrder(editingOrder._id, form);
-    setSaving(false);
-    setEditingOrder(null);
-    loadOrders();
+    const res = await updateOrder(editingOrder._id, form);
+    if (res.success) {
+      toast.success(res.message || "Order updated successfully");
+      setSaving(false);
+      setEditingOrder(null);
+      loadOrders();
+    } else {
+      toast.error(res.message || "Failed to update order");
+    }
   };
 
   const handleDelete = async (id) => {
     if (window.confirm("Delete this order?")) {
-      await deleteOrder(id);
-      loadOrders();
+      const res = await deleteOrder(id);
+      if (res.success) {
+        toast.success(res.message || "Order deleted successfully");
+        loadOrders();
+      } else {
+        toast.error(res.message || "Failed to delete order");
+      }
     }
   };
 
@@ -83,14 +97,14 @@ export default function OrdersTab() {
               <td>{order.status}</td>
               <td>${order.totalCost}</td>
               <td>
-                <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(order)}>Edit</button>
-                <button className="btn btn-sm btn-danger" onClick={() => handleDelete(order._id)}>Delete</button>
+                <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(order)}><FaEdit /></button>
+                <button className="btn btn-sm btn-danger" onClick={() => handleDelete(order._id)}><RiDeleteBin5Fill /></button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-
+      <ToastContainer />
       {editingOrder && (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
           <div className="modal-dialog modal-dialog-scrollable" role="document">

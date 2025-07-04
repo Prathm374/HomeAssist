@@ -39,7 +39,7 @@ export default function features({ heading, services, text, image }) {
           </div>
         </div>
       </div>
-      <div className="container px-4 py-5 col-lg-5 col-md-5 col-sm-11 my-5 mpimg">
+      <div className="container px-4 py-5 col-lg-5 col-md-5 my-5 mpimg">
         <img src={image} alt="Related to text" />
       </div>
     </div>

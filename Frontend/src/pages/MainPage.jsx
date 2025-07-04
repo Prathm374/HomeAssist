@@ -2,18 +2,20 @@ import "./MainPage.css";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
-import services from "../services.json";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { useUserStore } from "../store/useUserStore.js";
 import { useNavigate } from "react-router-dom";
+import { useServiceStore } from "../store/useServiceStore.js";
 
 export default function Mainpage() {
   const { user } = useUserStore();
+  const { services, fetchServices } = useServiceStore();
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
 useEffect(() => {
+  fetchServices();
     if (user?.role === "admin") {
       const modalShown = localStorage.getItem("adminModalShown");
       if (!modalShown) {
@@ -39,15 +41,16 @@ useEffect(() => {
       <div className="featHead">
         <h2>Services Crafted Uniquely for You</h2>
         <div className="feat">
-          {services.map((service) => {
+          {[...new Set(services.map((s) => s.categoryName))].map((catName) => {
+            const categoryServices = services.filter((s) => s.categoryName === catName);
+            const { categoryId, categoryName, categoryImage } = categoryServices[0];
             return (
               <Features
-                heading={service.heading}
-                services={service.services}
-                key={service.id}
-                text={service.text}
-                image={service.image}
-                mpimg={service.mpimg}
+                heading={categoryName}
+                services={categoryServices.map((s) => s.name)}
+                key={categoryId}
+                text={categoryServices.map((s) => s.description)}
+                image={categoryImage}
               />
             );
           })}

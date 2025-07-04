@@ -1,5 +1,9 @@
+import { RiDeleteBin5Fill } from 'react-icons/ri';
+import { FaEdit } from 'react-icons/fa';
 import { useAdminStore } from '../../store/useAdminStore.js';
 import { useEffect, useState } from 'react';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function UsersTab() {
   const { users, loadUsers, updateUser, deleteUser } = useAdminStore();
@@ -18,14 +22,24 @@ export default function UsersTab() {
   };
 
   const handleSave = async () => {
-    await updateUser(editUser._id, { username, role });
-    setEditUser(null);
-    loadUsers();
+    const res = await updateUser(editUser._id, { username, role });
+    if (res.success) {
+      toast.success(res.message || "User updated successfully");
+      setEditUser(null);
+      loadUsers();
+    } else {
+      toast.error(res.message || "Failed to update user");
+    }
   };
 
   const handleDelete = async (id) => {
-    await deleteUser(id);
-    loadUsers();
+    const res = await deleteUser(id);
+    if (res.success) {
+      toast.success(res.message || "User deleted successfully");
+      loadUsers();
+    } else {
+      toast.error(res.message || "Failed to delete user");
+    }
   };
 
   return (
@@ -44,14 +58,14 @@ export default function UsersTab() {
               <td>{user.username}</td>
               <td>{user.role}</td>
               <td>
-                <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(user)}>Edit</button>
-                <button className="btn btn-sm btn-danger" onClick={() => handleDelete(user._id)}>Delete</button>
+                <button className="btn btn-sm btn-warning me-2" onClick={() => handleEdit(user)}><FaEdit /></button>
+                <button className="btn btn-sm btn-danger" onClick={() => handleDelete(user._id)}><RiDeleteBin5Fill /></button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-
+      <ToastContainer />
       {editUser && (
         <div className="modal show d-block" tabIndex="-1" role="dialog">
           <div className="modal-dialog modal-dialog-centered" role="document">

@@ -11,7 +11,7 @@ export default function LoginHero() {
 
   const handleScrollDown = () => {
     window.scrollBy({
-      top: window.innerHeight * 1.2,
+      top: window.innerHeight,
       behavior: "smooth",
     });
   };
