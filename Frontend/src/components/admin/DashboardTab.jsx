@@ -151,7 +151,7 @@ export default function DashboardTab() {
         </div>
         <div className="col">
           <div className="card text-center p-3 h-100 shadow-sm d-flex flex-column justify-content-center">
-            <h6 className="text-muted mb-1">New Users</h6>
+            <h6 className="text-muted mb-1">Total Users</h6>
             <h3 className="fw-bold">{stats.totalUsers}</h3>
             <span
               className={stats.userGrowth >= 0 ? "text-success" : "text-danger"}

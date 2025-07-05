@@ -76,9 +76,9 @@
   margin-right: 3%;
   margin-left: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
-  width: 12%;
+  gap: 1rem;
   background: none;
   position: relative;
   z-index: 1;

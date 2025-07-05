@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useUserStore } from "../store/useUserStore.js";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function SignupPage(){
+export default function SignupPage() {
   const [newUser, setNewUser] = useState({
     username: "",
     password: "",
@@ -13,18 +15,17 @@ export default function SignupPage(){
   const handleSignUp = async (e) => {
     e.preventDefault();
     const { success, message } = await signupUser(newUser);
-    if(success) {
+    if (success) {
+      toast.success(message || "Registration successful!");
       navigate("/home");
     } else {
-      alert(message || "Registration failed");
+      toast.error(message || "Registration failed");
     }
   };
   return (
-    <div className="vh-100" style={{"overflow": "hidden"}}>
-      <div
-        className="container shadow-lg rounded-3 vstack gap-4"
-        style={{ marginTop: "10%", width: "25%" }}
-      >
+    <div className="vh-100 d-flex justify-content-center align-items-center">
+    <div className="col-sm-8 col-md-5 col-lg-4 col-xl-3">
+      <div className="container shadow-lg rounded-3 vstack gap-4">
         <h2 className="pt-4 text-center">Sign Up</h2>
         <div className="form-floating ">
           <input
@@ -63,6 +64,8 @@ export default function SignupPage(){
           Already have an account? <Link to="/">Log in</Link>
         </p>
       </div>
+      <ToastContainer />
+    </div>
     </div>
   );
-};
+}

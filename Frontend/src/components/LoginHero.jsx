@@ -19,26 +19,26 @@ export default function LoginHero() {
   return (
     <div>
       <div className="container  mx-auto col-xxl-8 px-4 py-5">
-        <div className="row flex-lg-row align-items-center g-5 py-5">
-          <div className="col-lg-6">
-            <h1 className="display-5 fw-bold text-info lh-1 mb-3">
+        <div className="row flex-md-row align-items-center justify-content-center g-5 py-5">
+          <div className="col-sm-10 col-md-6">
+            <h1 className="display-5 fw-bold text-info lh-1 mb-3 text-center text-md-start">
               Elevate Your Home with HomeAssist
             </h1>
-            <p className="lead text-light">
+            <p className="lead text-light text-center text-md-start">
               At HomeAssist, we simplify home care. From cleaning and repairs to
               personalized assistance, our reliable professionals ensure your
               home is in top shape.
             </p>
-            <p className="lead text-light">
+            <p className="lead text-light text-center text-md-start">
               Let us handle the hard work, so you can focus on what matters
               most.
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+            <div className="d-grid gap-2 d-flex justify-content-center justify-content-md-start">
               <button
                 onClick={handleGetStarted}
                 type="button"
                 className="cssbuttons-io-button" >
-                Get started
+                Get Started
                 <div className="icon">
                   <svg
                     height="24"
@@ -77,7 +77,7 @@ export default function LoginHero() {
               </button>
             </div>
           </div>
-          <div className="col-10 col-sm-8 col-lg-6 heroLogin">
+          <div className="col-sm-10 col-md-6 heroLogin">
             <div className="d-flex justify-content-center">
               <Login />
             </div>

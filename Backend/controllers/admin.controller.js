@@ -2,15 +2,20 @@ import User from "../models/user.model.js";
 import Order from "../models/order.model.js";
 import Service from "../models/service.model.js";
 
-// 📊 Dashboard Stats
+// 📊 Dashboard Stats 
+// !! These stats are per month and wont consider the year. Please make sure to consider the year in the stats.
 export const getAdminStats = async (req, res) => {
   try {
     const totalUsers = await User.countDocuments();
-    const totalOrders = await Order.countDocuments();
+    const totalOrders = await Order.countDocuments({
+      status: { $ne: "Cancelled" },
+    });
     const totalRevenue = await Order.aggregate([
+      { $match: { status: { $ne: "Cancelled" } } },
       { $group: { _id: null, total: { $sum: "$totalCost" } } },
     ]);
     const topServices = await Order.aggregate([
+      
       { $unwind: "$services" },
       { $group: { _id: "$services.service", count: { $sum: 1 } } },
       { $sort: { count: -1 } },
@@ -41,6 +46,7 @@ export const getAdminStats = async (req, res) => {
       { $sort: { _id: 1 } },
     ]);
     const ordersPerMonth = await Order.aggregate([
+      { $match: { status: { $ne: "Cancelled" } } },
       {
         $group: {
           _id: { $month: "$createdAt" },
@@ -64,6 +70,7 @@ export const getAdminStats = async (req, res) => {
     ]);
 
     const ordersByMonth = await Order.aggregate([
+      { $match: { status: { $ne: "Cancelled" } } },
       {
         $group: {
           _id: { $month: "$createdAt" },
@@ -72,6 +79,7 @@ export const getAdminStats = async (req, res) => {
       },
     ]);
     const revenueByMonth = await Order.aggregate([
+      { $match: { status: { $ne: "Cancelled" } } },
       {
         $group: {
           _id: { $month: "$createdAt" },
@@ -87,8 +95,8 @@ export const getAdminStats = async (req, res) => {
     const prevUserCount = getMonthCount(usersByMonth, lastMonth, "count");
     const currentOrderCount = getMonthCount(ordersByMonth, thisMonth, "count");
     const prevOrderCount = getMonthCount(ordersByMonth, lastMonth, "count");
-    const currentRevenue = getMonthCount(revenueByMonth, thisMonth,"total");
-    const prevRevenue = getMonthCount(revenueByMonth, lastMonth,"total");
+    const currentRevenue = getMonthCount(revenueByMonth, thisMonth, "total");
+    const prevRevenue = getMonthCount(revenueByMonth, lastMonth, "total");
 
     const userGrowth =
       prevUserCount === 0
@@ -99,7 +107,7 @@ export const getAdminStats = async (req, res) => {
       prevOrderCount === 0
         ? 100
         : ((currentOrderCount - prevOrderCount) / prevOrderCount) * 100;
-    
+
     const revenueGrowth =
       prevRevenue === 0
         ? 100

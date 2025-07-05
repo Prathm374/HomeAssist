@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
     const { success, message } = await loginUser({ username, password });
     if (success) {
-      toast.success("Login successful!");
+      toast.success(message || "Login successful!");
       navigate("/home");
     } else {
       toast.error(message || "Login failed");
@@ -51,10 +51,16 @@ export default function Login() {
           <GoogleLogin
             onSuccess={async (credentialResponse) => {
               const token = credentialResponse.credential;
-              await loginWithGoogle(token);
+              const { success, message } = await loginWithGoogle(token);
+              if (success) {
+                toast.success(message || "Google login successful!");
+                navigate("/home");
+              } else {
+                toast.error(message || "Google login failed");
+              }
             }}
             onError={() => {
-              alert("Google login failed.");
+              toast.error("Google login failed.");
             }}
           />
         </div>

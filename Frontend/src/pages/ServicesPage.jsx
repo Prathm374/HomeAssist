@@ -3,8 +3,10 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { useUserStore } from "../store/useUserStore.js";
 import { useOrderStore } from "../store/useOrderStore.js";
-import "./ServicesPage.css";
 import { useServiceStore } from "../store/useServiceStore.js";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./ServicesPage.css";
 
 const OrderCard = ({ order, onEdit, onCancel, onComplete }) => (
   <div className="order-card">
@@ -106,16 +108,28 @@ export default function ServicesPage() {
         selectedServiceIds: serviceIds,
       };
       if (editingOrderId) {
-        await editOrder(editingOrderId, orderPayload, user._id);
-        setEditingOrderId(null);
+        const { success, message } = await editOrder(editingOrderId, orderPayload, user._id);
+        if (success) {
+          toast.success(message || "Order updated successfully");
+          setShowForm(false);
+          setEditingOrderId(null);
+          resetForm();
+        } else {
+          toast.error(message || "Order update failed");
+        }
+        
       } else {
-        await placeOrder(orderPayload, user._id);
+        const { success, message } = await placeOrder(orderPayload, user._id);
+        if (success) {
+          toast.success(message || "Order placed successfully");
+          setShowForm(false);
+          resetForm();
+        } else {
+          toast.error(message || "Order placement failed");
+        }
       }
-
-      setShowForm(false);
-      resetForm();
     } catch (error) {
-      window.alert(error.message);
+      toast.error(error.message || "An error occurred");
     }
   };
 
@@ -146,11 +160,21 @@ export default function ServicesPage() {
   };
 
   const handleCancel = async (orderId) => {
-    await cancelOrder(orderId, user._id);
+    const { success, message } = await cancelOrder(orderId, user._id);
+    if (success) {
+      toast.success(message || "Order cancelled successfully");
+    } else {
+      toast.error(message || "Order cancellation failed");
+    }
   };
 
   const handleComplete = async (orderId) => {
-    await completeOrder(orderId, user._id);
+    const { success, message } = await completeOrder(orderId, user._id);
+    if (success) {
+      toast.success(message || "Order completed successfully");
+    } else {
+      toast.error(message || "Order completion failed");
+    }
   };
 
   const handleAddNewOrder = () => {
@@ -294,6 +318,7 @@ export default function ServicesPage() {
           </div>
         </main>
       </div>
+      <ToastContainer />
       <Footer />
     </>
   );

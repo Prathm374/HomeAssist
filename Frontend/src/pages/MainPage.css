@@ -12,14 +12,14 @@
       rgba(58, 46, 123, 1)
     ),
     url("../assets/back1.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .loginNavHero{
   padding-top: 14vh;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  /* overflow: hidden; */
 }
 
 .feat {

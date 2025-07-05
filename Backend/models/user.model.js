@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: [function(){ return this.loginType==='local'}, "Password is required"],
+        required: [function(){ return this.loginType !== 'google'}, "Password is required"],
         minlength: [6, 'Password must be at least 6 characters long'],
         maxlength: [100, 'Password cannot be more than 100 characters'],
         select: false

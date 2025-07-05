@@ -5,8 +5,10 @@
 
 .feature-card {
   width: 300px;
-  min-height: 180px;
+  height: 300px;
   padding: 1.5rem;
+  overflow: scroll;
+  scrollbar-width: none;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(8px);
   border-radius: 1rem;
@@ -45,8 +47,30 @@
   object-fit: cover;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .features-row {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .center-image {
+    display: none;
+  }
+  .feature-card {
+    flex: 0 0 40%;
+    height: auto;
+    overflow: hidden;
+  }
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-card {
+    flex: 0 0 90%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .feature-card p {
+    font-size: 0.85rem;
   }
 }

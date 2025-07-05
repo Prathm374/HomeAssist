@@ -23,6 +23,7 @@ export default function AboutPage() {
                 At HomeAssist, we strive to simplify your life by offering a one-stop solution for all your home service needs. 
                 Our team of professionals brings expertise and care to every task, ensuring your home receives the attention it deserves.
                 We aim to create a hassle-free experience for homeowners, providing reliable, high-quality services that save time and reduce stress.
+                We’re committed to building lasting relationships with our clients through consistent, trustworthy, and personalized support.
               </p>
             </div>
             <div className="flex-item">

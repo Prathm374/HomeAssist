@@ -17,7 +17,7 @@ connectDB();
 
 app.use(express.json());
 app.use(cors({
-  origin: ["https://home-assist-sepia.vercel.app"],
+  origin: "https://home-assist-sepia.vercel.app",
   credentials: true,
 }));
 
